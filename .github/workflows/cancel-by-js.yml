@@ -1,0 +1,25 @@
+name: 'cancel-by-js'
+on:
+  push:
+    branches:
+      - master
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+        
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+
+      - name: Install Dependencies
+        run: yarn
+
+      - name: Run coreExit.js
+        run: node scripts/coreExit.js
+
+      - name: Echo Hello World
+        run: echo "Hello World"
