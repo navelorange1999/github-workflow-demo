@@ -1,5 +1,5 @@
 {
-  "dependencies": {
+  "devDependencies": {
     "@actions/core": "^1.10.1"
   }
 }
